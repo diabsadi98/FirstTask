@@ -27,7 +27,7 @@ jobs:
           cp -r cypress/videos public/videos
           
            
-       - name: Merge test reports
+      - name: Merge test reports
          run: npm run combine:report
       
 #       - name: Generate HTML report
