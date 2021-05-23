@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "run-me": "cypress run --headless --config integrationFolder=cypress/integration/first_amazon_task"
+    "run-me": "cypress run --headless --config integrationFolder=cypress/integration/first_amazon_task",
+    "combine:report": "mochawesome-merge  cypress/reports/mocha/*.json > cypress/reports/report.json",
+    "generate:report": "marge cypress/reports/mochareports/report.json -f report -o cypress/reports/mochareports"
   },
   "repository": {
     "type": "git",

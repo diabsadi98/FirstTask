@@ -6,18 +6,18 @@ describe('Amazon Test Seacrh',() => {
         cy.visit('https://www.amazon.com/?&tag=googleglobalp-20&ref=pd_sl_7nnedyywlk_e&adgrpid=82342659060&hvpone=&hvptwo=&hvadid=393493755082&hvpos=&hvnetw=g&hvrand=4690605849944238361&hvqmt=e&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9069818&hvtargid=kwd-10573980&hydadcr=2246_11061421&gclid=EAIaIQobChMImuPdi7zQ8AIVBud3Ch03qACCEAAYASAAEgJNPfD_BwE')
     })
 
-    it.skip('Check if the input typed',() => {
+    it('Check if the input typed',() => {
         cy.get('#twotabsearchtextbox').type('Clock').should('have.value','Clock');
         
     })
 
-    it.skip('Check if the search button work',() => {
+    it('Check if the search button work',() => {
         cy.get('#nav-search-submit-button').click();
     })
 
-    it.skip('Select the clock',() => {
+    it('Select the clock',() => {
         cy.get('h2>a.a-link-normal',{timeout:10000}).contains('Clock').click()
-        //cy.go(-1)
+       cy.go(-1)
     })
     
     it.skip('Add the clock to cart', () =>{
@@ -38,17 +38,17 @@ describe('Amazon Test Seacrh',() => {
         
     })
 
-    it.skip('Select the first clock' , () => {
+    it('Select the first clock' , () => {
         cy.get('h2>a.a-link-normal>span.a-size-base-plus',{timeout:10000}).eq(1).should('contain' , 'Clock').click().go('back')
     
     })
     
-    it.skip('Select the last clock' , () => {
+    it('Select the last clock' , () => {
         cy.get('h2>a.a-link-normal>span.a-size-base-plus',{timeout:10000}).eq(-1).should('contain' , 'Clock').click()
         
     })
     
-    it.skip('Blur nav bar search',() => {
+    it('Blur nav bar search',() => {
         cy.get('#twotabsearchtextbox').focus().blur({force  : true})
     })
     
@@ -57,18 +57,18 @@ describe('Amazon Test Seacrh',() => {
         cy.get('#twotabsearchtextbox').clear();
     })
     
-    it.skip('Screenshot test' , () => {
+    it('Screenshot test' , () => {
         cy.screenshot()
      })
 
-    it.skip('Check if writes correct' , () => {
+    it('Check if writes correct' , () => {
         cy.writeFile('messages/message.txt', 'Hello World')
         cy.readFile('messages/message.txt').then((text) => {
           expect(text).to.equal('Hello World') 
         })
      })
 
-     it.skip("Intercept Amazon call" , () => {
+     it("Intercept Amazon call" , () => {
         cy.intercept('https://www.amazon.com/').as('amazonFirstRequest');
         cy.visit('https://www.amazon.com/');
         cy.get('@amazonFirstRequest').then((res)=>{
@@ -79,7 +79,7 @@ describe('Amazon Test Seacrh',() => {
 
      })
 
-     it.skip('Check host' , ()=> {
+     it('Check host' , ()=> {
         cy.visit('https://www.amazon.com/');
         cy.window().then((win) => {
             expect(win.location.hostname).to.equal('www.amazon.com')
