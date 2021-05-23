@@ -3,7 +3,7 @@ name: Generate Cypress Report
 on:
   push:
       branches:
-              - 'master'
+              - 'main'
 jobs:
   cypress-test:
     name: Run on Chrome 83
