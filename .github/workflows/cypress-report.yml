@@ -1,3 +1,4 @@
+#yml file
 name: Generate Cypress Report
 on:
   push:
