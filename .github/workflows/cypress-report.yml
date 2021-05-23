@@ -24,6 +24,7 @@ jobs:
       - name: Copy test excution videos and screenshots
         run: |
           mkdir public 
+          cp -r cypress/videos public/videos
           
            
 #       - name: Merge test reports
