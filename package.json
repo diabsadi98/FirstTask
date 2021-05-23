@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+    ,"run-me":"cypress run --headless --config integrationFolder=cypress/integration/first_amazon_task"
   },
   "repository": {
     "type": "git",
