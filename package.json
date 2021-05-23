@@ -22,13 +22,13 @@
   "dependencies": {
     "cypress": "^7.3.0"
   },
-  "devDependencies": {
-    "cypress": "^5.4.0",
-    "cypress-downloadfile": "^1.2.0",
-    "cypress-file-upload": "^4.1.1",
-    "mocha": "^8.2.0",
-    "mochawesome": "^6.1.1",
+  "devDependencies": {  
+     "cypress-multi-reporters": "^1.5.0",
+    "mocha": "^8.4.0",
+    "mochawesome": "^6.2.2",
     "mochawesome-merge": "^4.2.0",
-    "mochawesome-report-generator": "^5.1.0"
+    "mochawesome-report-generator": "^5.2.0",
+    "cypress-downloadfile": "^1.2.0",
+    "cypress-file-upload": "^4.1.1"
   }
 }
