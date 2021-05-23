@@ -34,7 +34,6 @@ jobs:
       
       # - name: Generate HTML report
       #   run : npm run generate:report
-        
       - name: Deploy report to Github Page
         uses: peaceiris/actions-gh-pages@v3
         with:
