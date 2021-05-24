@@ -1,8 +1,6 @@
 name: Generate Cypress Report
 on:
-  push:
-      branches:
-              - 'main'
+  pull-request
 jobs:
   cypress-test:
     name: Run on Chrome 83
@@ -15,8 +13,7 @@ jobs:
         run: 
           npm ci
           $(npm bin)/cypress verify   
-            
-            
+
       - name: Run Cypress tests
         run: npm run run-me
         continue-on-error: true
